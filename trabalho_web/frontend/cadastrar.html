@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tocloc - Cadastro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="style-cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cadastro-box">
+            <h1>Crie uma Conta</h1>
+            <form id="cadastroForm">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <input type="password" id="password" name="password" placeholder="Senha" required><br>
+                <input type="button" value="Criar Conta" onclick="cadastrarUsuario()">
+                <p class="login-link">Já possui uma conta? <a href="login.html">Clique aqui</a></p>
+            </form>            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="cadastrar.js"></script>
+</body>
+</html>

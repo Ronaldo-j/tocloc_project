@@ -1,0 +1,20 @@
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Largura dos controles */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border-radius: 50%; /* Ícones circulares */
+    width: 40px; /* Largura do ícone */
+    height: 40px; /* Altura do ícone */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
