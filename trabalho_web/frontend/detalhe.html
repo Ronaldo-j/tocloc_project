@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Quadra</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Card de detalhes da quadra -->
+        <div class="card">
+            <img src="URL_DA_IMAGEM" class="card-img-top" alt="Foto da Quadra">
+            <div class="card-body">
+                <h5 class="card-title" id="quadra-nome">Nome da Quadra</h5>
+                <p class="card-text" id="quadra-localizacao">
+                    <strong>Localização:</strong> Endereço da quadra
+                </p>
+                <p class="card-text" id="quadra-horarios">
+                    <strong>Horários vagos:</strong> 
+                    <span class="text-success">09:00 - 10:00</span>, 
+                    <span class="text-success">13:00 - 14:00</span>, 
+                    <span class="text-success">16:00 - 17:00</span>
+                </p>
+                <!-- Botão reservar -->
+                <button id="reservar-btn" class="btn btn-primary" onclick="reservarQuadra()">
+                    Reservar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // Função para realizar a reserva
+        function reservarQuadra() {
+            const quadraId = 1; // Exemplo: ID da quadra que será reservada
+            const userId = 123; // Exemplo: ID do usuário logado
+
+            // Simula envio de dados
+            fetch('http://localhost:5000/reservar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ quadraId, userId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Quadra reservada com sucesso!');
+                } else {
+                    alert('Erro ao reservar a quadra: ' + data.error);
+                }
+            })
+            .catch(err => alert('Erro ao conectar ao servidor.'));
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
