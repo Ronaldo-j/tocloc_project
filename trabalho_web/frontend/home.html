@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tocloc </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style-home.css">
+    </head>
+    
+    
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Beach Tennis Pro</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quadras.html">Quadras</a></li>
+                    <li class="nav-item"><a class="btn btn-warning nav-link" id="login-btn" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-warning nav-link ml-3" id="signup-btn" href="cadastrar.html">Sign up</a></li>
+                    <li class="nav-item d-none" id="user-menu">
+                        <a class="btn btn-warning nav-link" onclick="logout()">Logout</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Seção de Destaque -->
+    <section class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2>Reserve sua Quadra de Beach Tennis</h2>
+            <p>Encontre a quadra perfeita para jogar com amigos, competir e se divertir.</p>
+            <a href="quadras.html" class="btn btn-warning btn-lg">Reserve Agora</a>
+
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about py-5">
+        <div class="container">
+            <h3 class="text-center">Sobre Nós</h3>
+            <p>Oferecemos as melhores quadras de beach tennis com fácil acesso para reservas online. Nossa plataforma permite que você encontre a quadra ideal para o seu jogo, com opções de horários flexíveis e locais incríveis.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Quadras -->
+    <section id="quadras" class="courts py-5 bg-light">
+        <div class="container">
+            <h3 class="text-center">Nossas Quadras</h3>
+            <div id="quadrasCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" id="quadras-container">
+                    <!-- Quadras serão carregadas aqui via JavaScript -->
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#quadrasCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#quadrasCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </section>
+
+
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Tocloc . Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
