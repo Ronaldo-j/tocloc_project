@@ -1,0 +1,44 @@
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%; /* Centraliza verticalmente os botões */
+    transform: translateY(-50%); /* Ajusta a posição para ficar exatamente no meio */
+    width: 5%; /* Define a largura */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border-radius: 50%; /* Ícones circulares */
+    width: 40px; /* Largura do ícone */
+    height: 40px; /* Altura do ícone */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+#quadras {
+    position: relative; /* Importante para os botões serem posicionados corretamente */
+    min-height: 400px; /* Ajuste para garantir uma altura mínima */
+}
+.carousel-control-prev,
+.carousel-control-next {
+    top: calc(50% - 20px); /* Ajuste fino na posição */
+}
+.user-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+}
+.user-circle i {
+    line-height: 40px;
+}
